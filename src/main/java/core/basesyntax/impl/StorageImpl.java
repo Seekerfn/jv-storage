@@ -1,6 +1,5 @@
 package core.basesyntax.impl;
 
-
 import java.util.Objects;
 
 import core.basesyntax.Storage;
