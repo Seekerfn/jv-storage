@@ -4,7 +4,6 @@ import java.util.Objects;
 
 import core.basesyntax.Storage;
 
-
 public class StorageImpl<K, V> implements Storage<K, V> {
 
     private static final int MAX_ITEMS_NUMBER = 10;
@@ -25,7 +24,7 @@ public class StorageImpl<K, V> implements Storage<K, V> {
                 items[i].setValues(value);
                 return;
             }
-        }       
+        }
 
         items[size++] = new Box<>(key, value);
 
@@ -37,7 +36,7 @@ public class StorageImpl<K, V> implements Storage<K, V> {
             if (Objects.equals(items[i].getKey(), key)) {
                 return items[i].getValue();
             }
-        }       
+        }
         return null;
     }
 
