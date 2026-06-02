@@ -1,9 +1,7 @@
 package core.basesyntax.impl;
 
 import core.basesyntax.Storage;
-
 import java.util.Objects;
-
 
 public class StorageImpl<K, V> implements Storage<K, V> {
 
@@ -19,16 +17,13 @@ public class StorageImpl<K, V> implements Storage<K, V> {
 
     @Override
     public void put(K key, V value) {
-
         for (int i = 0; i < size; i++) {
             if (Objects.equals(items[i].getKey(), key)) {
                 items[i].setValues(value);
                 return;
             }
         }
-
         items[size++] = new Box<>(key, value);
-
     }
 
     @Override
